@@ -1,4 +1,4 @@
-{% set version = "0.2.7" %}
+{% set version = "0.2.8" %}
 
 package:
   name: ruamel.yaml.clib
@@ -6,7 +6,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-{{ version }}.tar.gz
-    sha256: 1f08fd5a2bea9c4180db71678e850b995d2a5f4537be0e94557668cf0f5f9497
+    sha256: beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512
   - fn: _ruamel_yaml.pyx
     url: https://sourceforge.net/p/ruamel-yaml-clib/code/ci/{{ version }}/tree/_ruamel_yaml.pyx?format=raw
     sha256: fb6b5653201f1ed89a951f6931fda377737156c4f30cadbd240f4d28f607665a
@@ -15,7 +15,7 @@ source:
     sha256: ee35a75fd753a369bee439ec7e1826e77c7feaabf9c3ec9cf2f58110c7a95656
 
 build:
-  number: 2
+  number: 0
   script:
     - cythonize _ruamel_yaml.pyx
     - {{ PYTHON }} -m pip install . -vv
